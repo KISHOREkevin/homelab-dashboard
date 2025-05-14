@@ -26,8 +26,7 @@ const Links = () => {
   if(loading){
     return <h1>Loading...</h1>
   }
-    console.log(allLinks)
-  return (
+      return (
     <div className="flex p-3 flex-wrap justify-center" >
       
       {allLinks.length === 0 ?
