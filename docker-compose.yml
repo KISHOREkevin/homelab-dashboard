@@ -1,0 +1,27 @@
+services:
+  frontend:
+    image: "kishorekevin/homelab-dashboard-client"
+    container_name: "homelab-dashboard-client"
+    restart: unless-stopped
+    ports:
+        - "5020:5173"
+    environment:
+      VITE_DB_URL: http://homelab-dashboard-server:8090
+    depends_on:
+      - backend 
+    
+  backend:
+    image: "kishorekevin/homelab-dashboard-server"
+    container_name: "homelab-dashboard-server"
+    restart: unless-stopped 
+    expose:
+      - 8090
+    volumes:
+      - homelab-dashboard-data:/pb_data
+    environment:
+      PB_ALLOWED_ORIGINS: "http://localhost:5020"
+   
+volumes:
+  homelab-dashboard-data: 
+
+

@@ -1,6 +1,6 @@
 import Pocketbase from "pocketbase";
 
-const pb=new Pocketbase("http://localhost:8090");
+const pb=new Pocketbase("/");
 pb.autoCancellation(false);
 
 const links = pb.collection('links');
