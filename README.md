@@ -85,7 +85,7 @@ docker network create homelab-dashboard-network
 * Open browser and go to http://localhost:[your-port]/
 
 # License
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](https://raw.githubusercontent.com/KISHOREkevin/homelab-dashboard/refs/heads/main/LICENSE).
 
 # Acknowledgements
 - [Pocketbase](https://pocketbase.io/)
