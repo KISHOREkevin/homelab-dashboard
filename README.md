@@ -1,12 +1,48 @@
-# React + Vite
+# ....... Under Development dont use this now ..........
+ 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Simple and minimal Dashboard for homelab
+![Homelab Dashboard](https://github.com/user-attachments/assets/11e45f67-90d0-4fe9-b799-b09da6b65b4d)
 
-Currently, two official plugins are available:
+A straightforward dashboard for easily accessing your self-hosted services via a collection of links and their corresponding names. This project aims to provide a simple, centralized place to keep track of and access the various applications and services running in your homelab.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* **Link Management:** Easily add and manage links to your hosted services.
+* **Service Naming:** Assign clear names to your links for easy identification.
+* **Centralized Access:** Provides a single page to quickly access all your important homelab services.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Built with technologies such as :
+* React
+* Vite
+* Tailwind CSS
+* Pocketbase
+  
+# Self-Host ( Manual )
+* Setup the pocketbase in your system.
+* Check out this [documnetation](https://pocketbase.io/docs/) for reference to setup.
+```
+git clone https://github.com/KISHOREkevin/homelab-dashboard.git
+cd homelab-dashboard
+npm install
+npm run dev
+```
+* If you want to change port , open vite.config,js
+  ```
+  export default defineConfig({
+    plugins: [react(),tailwindcss()],
+    optimizeDeps: {
+      exclude: ['@ffmpeg/ffmpeg'],
+    }
+    server:{
+      port:<your-port>
+    }
+  })
+  ```
+* Inside the `defineConfig` function add the server option with your preferred `port`.
+* Open browser and go to http://localhost:[your-port]/
+
+
+### Let me know if you want to include:
+- Contribution guidelines
+- A "To-do" or "Future Features" section  
+#### I can add that as well!
